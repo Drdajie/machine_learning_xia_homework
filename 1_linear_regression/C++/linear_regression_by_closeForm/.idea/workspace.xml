@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="97149f4e-2aef-4aaf-a8a2-3a09df68fff8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../linear_regression_by_GD/Debug/linear_regression_by GD.log" beforeDir="false" afterPath="$PROJECT_DIR$/../linear_regression_by_GD/Debug/linear_regression_by GD.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../linear_regression_by_GD/linear_regression_by GD.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/../linear_regression_by_GD/linear_regression_by GD.vcxproj.filters" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../linear_regression_by_GD/linear_regression_by GD.vcxproj.user" beforeDir="false" afterPath="$PROJECT_DIR$/../linear_regression_by_GD/linear_regression_by GD.vcxproj.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Debug/regression.log" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/regression.log" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="JupyterTrust" id="8f72fcbe-ca2c-4c6f-bbbe-25afda6d6de5" />
+  <component name="ProjectId" id="1hndXrZWLzN3Wa7fJ8p0eChS164" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="97149f4e-2aef-4aaf-a8a2-3a09df68fff8" name="Default Changelist" comment="" />
+      <created>1600650833189</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600650833189</updated>
+      <workItem from="1600650834489" duration="13000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1046" y="437" width="530" height="605" key="FileChooserDialogImpl" timestamp="1600650845977">
+      <screen x="72" y="33" width="2488" height="1407" />
+    </state>
+    <state x="1046" y="437" width="530" height="605" key="FileChooserDialogImpl/72.33.2488.1407@72.33.2488.1407" timestamp="1600650845977" />
+  </component>
+</project>

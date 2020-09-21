@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b438645f-0ca9-458d-95ec-c9232de65ac8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Load_FIle/Load_File.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linear_regression_by_GD/Debug/linear_regression_by GD.log" beforeDir="false" afterPath="$PROJECT_DIR$/linear_regression_by_GD/Debug/linear_regression_by GD.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linear_regression_by_GD/GD for linear regression.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/linear_regression_by_GD/GD for linear regression.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linear_regression_by_GD/linear_regression_by GD.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/linear_regression_by_GD/linear_regression_by GD.vcxproj.filters" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linear_regression_by_GD/linear_regression_by GD.vcxproj.user" beforeDir="false" afterPath="$PROJECT_DIR$/linear_regression_by_GD/linear_regression_by GD.vcxproj.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linear_regression_by_closeForm/Debug/regression.log" beforeDir="false" afterPath="$PROJECT_DIR$/linear_regression_by_closeForm/Debug/regression.log" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="JupyterTrust" id="8f72fcbe-ca2c-4c6f-bbbe-25afda6d6de5" />
+  <component name="ProjectId" id="1hnd4opHRcUAWBTfFbLHgQL4Fte" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Linear_Regression" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Linear_Regression" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Linear_Regression" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="1_linear_regression" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Linear_Regression" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Linear_Regression/Linear_Regression.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="1_linear_regression" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Linear_Regression" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b438645f-0ca9-458d-95ec-c9232de65ac8" name="Default Changelist" comment="" />
+      <created>1600650605651</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600650605651</updated>
+      <workItem from="1600650609760" duration="66000" />
+      <workItem from="1600650706954" duration="71000" />
+      <workItem from="1600650806962" duration="26000" />
+      <workItem from="1600650849236" duration="5996000" />
+      <workItem from="1600668175654" duration="4288000" />
+      <workItem from="1600678104162" duration="1041000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="770" y="368" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600652355910">
+      <screen x="72" y="33" width="2488" height="1407" />
+    </state>
+    <state x="770" y="368" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.33.2488.1407@72.33.2488.1407" timestamp="1600652355910" />
+    <state x="1046" y="437" width="530" height="605" key="FileChooserDialogImpl" timestamp="1600679143460">
+      <screen x="72" y="33" width="2488" height="1407" />
+    </state>
+    <state x="1046" y="437" width="530" height="605" key="FileChooserDialogImpl/72.33.2488.1407@72.33.2488.1407" timestamp="1600679143460" />
+    <state width="2424" height="374" key="GridCell.Tab.0.bottom" timestamp="1600657892692">
+      <screen x="72" y="33" width="2488" height="1407" />
+    </state>
+    <state width="2424" height="374" key="GridCell.Tab.0.bottom/72.33.2488.1407@72.33.2488.1407" timestamp="1600657892692" />
+    <state width="2424" height="374" key="GridCell.Tab.0.center" timestamp="1600657892691">
+      <screen x="72" y="33" width="2488" height="1407" />
+    </state>
+    <state width="2424" height="374" key="GridCell.Tab.0.center/72.33.2488.1407@72.33.2488.1407" timestamp="1600657892691" />
+    <state width="2424" height="374" key="GridCell.Tab.0.left" timestamp="1600657892691">
+      <screen x="72" y="33" width="2488" height="1407" />
+    </state>
+    <state width="2424" height="374" key="GridCell.Tab.0.left/72.33.2488.1407@72.33.2488.1407" timestamp="1600657892691" />
+    <state width="2424" height="374" key="GridCell.Tab.0.right" timestamp="1600657892691">
+      <screen x="72" y="33" width="2488" height="1407" />
+    </state>
+    <state width="2424" height="374" key="GridCell.Tab.0.right/72.33.2488.1407@72.33.2488.1407" timestamp="1600657892691" />
+    <state x="441" y="389" width="1286" height="912" key="SettingsEditor" timestamp="1600679128811">
+      <screen x="72" y="33" width="2488" height="1407" />
+    </state>
+    <state x="441" y="389" width="1286" height="912" key="SettingsEditor/72.33.2488.1407@72.33.2488.1407" timestamp="1600679128811" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/1_linear_regression$Linear_Regression.coverage" NAME="Linear_Regression Coverage Results" MODIFIED="1600653319896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Linear_Regression" />
+  </component>
+</project>
