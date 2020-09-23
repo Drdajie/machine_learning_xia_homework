@@ -1,5 +1,4 @@
 '''This modle only has one class named Linear_Regression as parent class '''
-
 import numpy as np
 
 '''  This class is a father cs representing the model of linear regression, and any
