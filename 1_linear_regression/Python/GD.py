@@ -1,6 +1,6 @@
 from Linear_Regression import Linear_Regression
 import matplotlib.pyplot as plt
-import  Normalization as nmz
+import Tools.Normalization as nmz
 import numpy as np
 
 class GD(Linear_Regression):
