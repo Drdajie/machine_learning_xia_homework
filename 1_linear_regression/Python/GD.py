@@ -2,6 +2,7 @@ from Linear_Regression import Linear_Regression
 import matplotlib.pyplot as plt
 import Tools.Normalization as nmz
 import numpy as np
+import time
 
 class GD(Linear_Regression):
     def __init__(self):
@@ -53,6 +54,7 @@ class GD(Linear_Regression):
         ans = self.hypothesis(np.array([1, tempX]))[0]
         ans = self.get_ans(ans)
         print('2014年的预测结果为：', ans)
+        time.sleep(150)
 
 
 if __name__ == '__main__':

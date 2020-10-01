@@ -1,6 +1,7 @@
 #import Linear_Regression as LR
 from Linear_Regression import Linear_Regression
 import numpy as np
+import time
 
 class Close_Form(Linear_Regression):
     def __init__(self):
@@ -22,3 +23,4 @@ def show_result():
     print('2014年的预测结果为：',cf.hypothesis(np.array([1,2014]))[0])
 
 show_result()
+time.sleep(150)
