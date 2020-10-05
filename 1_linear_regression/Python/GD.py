@@ -1,6 +1,6 @@
 from Linear_Regression import Linear_Regression
 import matplotlib.pyplot as plt
-import Tools.Normalization as nmz
+import machine_learning_xia_homework.Tools.Normalization as nmz
 import numpy as np
 import time
 
