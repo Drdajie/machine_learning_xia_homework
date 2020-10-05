@@ -1,5 +1,7 @@
 from Linear_Regression import Linear_Regression
 import matplotlib.pyplot as plt
+import sys
+sys.path.append("..\..\..")
 import machine_learning_xia_homework.Tools.Normalization as nmz
 import numpy as np
 import time
