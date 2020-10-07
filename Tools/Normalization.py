@@ -1,17 +1,17 @@
 import numpy as np
 
-def min_max_normalization(dataX):
+def min_max_normalization(data,myMin,myMax):
     #alter dataX to ndarray
-    tempType = type(dataX)
+    tempType = type(data)
     if tempType == 'numpy.matrix':
-        x = np.asarray(dataX)
+        x = np.asarray(data)
     elif tempType == 'list':
-        x = np.array(dataX)
+        x = np.array(data)
     else:
-        x = dataX
-
+        x = data
     #process
-    myMin = np.min(x); myMax = np.max(x)
     x = (x - myMin)/(myMax - myMin)
-
     return x
+
+def reverse_mm_normalization(data,myMin,myMax):
+    return data * (myMax-myMin) + myMin
