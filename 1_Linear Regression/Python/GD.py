@@ -27,7 +27,7 @@ class GD(Linear_Regression):
 
     def gd_process_and_show(self):
         #init paraments & picture
-        itrNum = 500                      #iterator num
+        itrNum = 50                       #iterator num
         lr = 0.01                         # lr is learning rate
         plt.ion()
         lossY = []
@@ -37,22 +37,21 @@ class GD(Linear_Regression):
         for i in range(itrNum):
             self.thetas = self.thetas - lr * self.error_feature()
             plt.cla()
-            if i < 20 or i % 100 == 0:
-                #绘制 loss 图
-                plt.subplot(121)
-                stepX.append(i)
-                lossY.append(self.cost_function(self.tempX,self.tempY))
-                plt.plot(stepX,lossY)
-                #绘制拟合图
-                plt.subplot(122)
-                plt.xlim(self.xMin,self.xMax + 1)
-                plt.ylim(self.yMin,self.yMax)
-                plt.plot(self.dataX[1],
-                          nm.reverse_mm_normalization(self.tempY[:,0],self.yMin,self.yMax),'ro')
-                plt.plot(self.dataX[1],
-                          nm.reverse_mm_normalization(self.hypothesis(self.tempX.T)[:,0],
-                                                       self.yMin,self.yMax))
-                plt.pause(0.001)
+            #绘制 loss 图
+            plt.subplot(121)
+            stepX.append(i)
+            lossY.append(self.cost_function(self.tempX,self.tempY))
+            plt.plot(stepX,lossY)
+            #绘制拟合图
+            plt.subplot(122)
+            plt.xlim(self.xMin,self.xMax + 1)
+            plt.ylim(self.yMin,self.yMax)
+            plt.plot(self.dataX[1],
+                      nm.reverse_mm_normalization(self.tempY[:,0],self.yMin,self.yMax),'ro')
+            plt.plot(self.dataX[1],
+                      nm.reverse_mm_normalization(self.hypothesis(self.tempX.T)[:,0],
+                                                   self.yMin,self.yMax))
+            plt.pause(0.001)
         plt.ioff()
         plt.show()
 
@@ -64,8 +63,6 @@ class GD(Linear_Regression):
         ans = self.hypothesis(np.array([1, tempX]))[0]
         ans = nm.reverse_mm_normalization(ans,self.yMin,self.yMax)
         print('2014年的预测结果为：', ans)
-        time.sleep(150)
-
 
 if __name__ == '__main__':
     gd = GD()
