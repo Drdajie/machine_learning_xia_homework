@@ -1,8 +1,8 @@
 from Linear_Regression import Linear_Regression
 import matplotlib.pyplot as plt
 import sys
-sys.path.append("..\..\..")
-import machine_learning_xia_homework.Tools.Normalization as nm
+sys.path.append("../../")
+import Tools.Normalization as nm
 import numpy as np
 import time
 import copy
@@ -27,7 +27,7 @@ class GD(Linear_Regression):
 
     def gd_process_and_show(self):
         #init paraments & picture
-        itrNum = 1000                     #iterator num
+        itrNum = 500                      #iterator num
         lr = 0.01                         # lr is learning rate
         plt.ion()
         lossY = []
@@ -36,6 +36,7 @@ class GD(Linear_Regression):
         #process
         for i in range(itrNum):
             self.thetas = self.thetas - lr * self.error_feature()
+            plt.cla()
             if i < 20 or i % 100 == 0:
                 #绘制 loss 图
                 plt.subplot(121)
