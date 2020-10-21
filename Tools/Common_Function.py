@@ -2,17 +2,14 @@ import numpy as np
 import math
 
 def sigmoid(data):
-    """
-    该函数为: 1/（1+e^-z)
+    """该函数为: 1/（1+e^-z)
+    :param data: 一维或二维
+    :return:
     """
     #input 参数可能为 ndarray 和 普通数字
     if(type(data) == np.ndarray):
         temp = np.exp(-data)
-        ans = 1/(1 + temp)
-        if(data.ndim == 2):
-            return ans[0]
-        else:
-            return ans
+        return (1/(1 + temp))
     else:
         return 1/(1+math.exp(-data))
 

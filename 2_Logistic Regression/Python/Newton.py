@@ -3,5 +3,5 @@ import Logistic_Regression as LR
 if __name__ == "__main__":
     def get_ans():
         lr = LR.Logistic_Regression()
-        lr.SGD_getAns()
+        lr.newton_getAns()
     get_ans()

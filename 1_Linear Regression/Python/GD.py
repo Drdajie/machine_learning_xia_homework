@@ -19,7 +19,8 @@ class GD(Linear_Regression):
         self.tempY = nm.min_max_normalization(self.tempY,self.yMin,self.yMax)
 
 
-    def error_feature(self):                    #represent error*feature
+    def error_feature(self):
+        """error * feature"""
         hs = self.hypothesis(self.tempX.T)
         myError = hs - self.tempY
         return self.tempX @ myError
@@ -29,7 +30,8 @@ class GD(Linear_Regression):
         #init paraments & picture
         itrNum = 50                       #iterator num
         lr = 0.01                         # lr is learning rate
-        plt.ion()
+        #plt.ion()
+        plt.ioff()
         lossY = []
         stepX = []
 

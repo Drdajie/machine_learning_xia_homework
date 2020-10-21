@@ -10,7 +10,15 @@ def min_max_normalization(data,myMin,myMax):
     else:
         x = data
     #process
-    x = (x - myMin)/(myMax - myMin)
+    if x.ndim == 1:
+        x = (x - myMin) / (myMax - myMin)
+    else:
+        n = x.shape[1]
+        if n == 1:
+            x = (x - myMin)/(myMax - myMin)
+        if n == 2:
+            for i in range(n):
+                x[:,i] = (x[:,i] - myMin[i])/(myMax[i] - myMin[i])
     return x
 
 def reverse_mm_normalization(data,myMin,myMax):
