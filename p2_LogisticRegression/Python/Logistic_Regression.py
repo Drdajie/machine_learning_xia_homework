@@ -10,13 +10,13 @@ import random
 class Logistic_Regression:
     """用 logistic regression 来预测分类
     """
-    def __init__(self,fileName = "../../Data/ex4Data"):
+    def __init__(self,fileX,fileY):
         """导入数据并做处理；创建参数向量并设初值；创建相关参数
         :param fileName: traning data 所在目录(不包含文件名)
         """
         #导入数据并做处理
         #导入数据: 样本个数，input 数据,label 数据
-        self.dataNum,self.dataX,self.dataY = self.load_data(fileName)
+        self.dataNum,self.dataX,self.dataY = self.load_data(fileX,fileY)
         self.xMin = self.dataX.min(axis=0)
         self.xMax = self.dataX.max(axis=0)
         #处理
@@ -32,7 +32,7 @@ class Logistic_Regression:
         #初始化参数
         self.thetas = np.zeros((self.dataX.shape[0], 1))
 
-    def load_data(self,fileName):
+    def load_data(self,fileX,fileY):
         """用于将 training data 的 input 和 label 分别读入
         思路：
             先将文件中的数据存储于列表当中，再将列表转化为 numpy.ndarray 类型。
@@ -44,7 +44,7 @@ class Logistic_Regression:
         tempYList = []
         dataNum = 0
         #1.1_读取 input 数据，存储在 tempXList，并把它转化为 ndarray类型的 xData 变量。（顺便统计dataNum）
-        with open(fileName + "/ex4x.dat","r") as xFile:
+        with open(fileX) as xFile:
             for line in xFile.readlines():
                 dataNum = dataNum + 1
                 tempTool = line.strip().split()
@@ -54,7 +54,7 @@ class Logistic_Regression:
         #1.2_转换 tempXList
         xData = np.array(tempXList)
         #2.1_读取 label 数据，存储在 tempYList，并把它转化为 ndarray类型的 yData 变量。
-        with open(fileName + "/ex4y.dat","r") as yFile:
+        with open(fileY) as yFile:
             for line in yFile.readlines():
                 tempData = float(line.strip())
                 tempYList.append(int(tempData))
@@ -116,7 +116,6 @@ class Logistic_Regression:
             """error * feature -> 代表着‘求导’之后的东西"""
             return self.dataX @ (self.dataY - self.hypothesis(self.dataX))
         a = 0.01                                            #learning rate
-        iNum = 100                                          #iteration num
         loss = [];step = [];accuracy = []                   #loss图和准确率图的坐标轴
         #process & plot
         plt.ion()
@@ -125,6 +124,7 @@ class Logistic_Regression:
             #GD process
             self.thetas = self.thetas + a * error_feature()
             plt.cla()
+            plt.suptitle('logistic train')
             #绘图,绘制 loss、准确率、拟合图
             #1_绘制 loss 图
             plt.subplot(131)
