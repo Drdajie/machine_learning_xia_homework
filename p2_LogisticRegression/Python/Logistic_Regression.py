@@ -87,26 +87,73 @@ class Logistic_Regression:
     def likelihood_estimation(self):
         pass
 
-    def get_accuracy(self,h):
+    def get_classResult(self,h):
+        """将预测结果转换为分类结果
+        :param h: 预测结果（概率）
+        :return: 分类结果
+        """
+        ans = []
+        for i in range(h.shape[0]):
+            if(h[i][0] >= 0.5):
+                ans.append(1)
+            else:
+                ans.append(0)
+        return ans
+
+    def get_accuracy(self,h,dataY):
         """计算当前参数对应的预测准确率
         思路：
             用预测正确的个数除以全部的样本个数。
         :param h: 当前预测结果，类型为一个列向量，里面存储的是预测值（概率）
         :return: 准确率，一个数
         """
-        #1_先将预测结果从概率换成类别
-        h1 = []
-        for i in range(self.dataNum):
-            if(h[i][0] >= 0.5):
-                h1.append(1)
-            else:
-                h1.append(0)
+        #1_得到分类结果
+        ans = self.get_classResult(h)
         #2_计算正确率
         cNum = 0                              #correct num
-        for i in range(self.dataNum):
-            if h1[i] == self.dataY[i][0]:
+        for i in range(h.size):
+            if ans[i] == dataY[i][0]:
                 cNum += 1
-        return cNum/self.dataNum
+        return cNum/h.size
+
+    def plot_testResult(self,testXFile,testYFile = ''):
+        """绘制分类图，由数据点和分类线构成。
+        注意:
+            1_在画图之前先对数据预处理
+            2_数据点用红蓝两色来区分不同的分类
+        :param testXFile: 测试数据 input 的文件名
+        :param testYFile: 测试数据 output 的文件名
+        :return: 无
+        """
+        if testYFile != '':
+            #预处理
+            dataNum,dataX,dataY = self.load_data(testXFile,testYFile)
+            dataX = nm.min_max_normalization(dataX,self.xMin,self.xMax)
+            add = np.ones((dataX.shape[0],1))
+            dataX = np.hstack((add,dataX)).T
+            dataY = np.atleast_2d(dataY).T
+            # 1_绘制数据点
+            plt.title('logistic test')
+            plt.xlabel("x1")
+            plt.ylabel("x2")
+            for j in range(dataX.shape[1]):
+                if dataY[j,0] == 1:
+                    plt.plot(dataX[1,j], dataX[2,j], 'ro')
+                else:
+                    plt.plot(dataX[1,j], dataX[2,j], 'bo')
+            # 2_绘制分类线
+            # 思路：
+            # 因为模型的预测结果是通过比较sigmoid函数的输出与0.5得到的。
+            # 而当sigmoid函数output为0.5时，w0 + w1*x1 + w2*x2 = 0。
+            # 又因为图像的x、y轴分别为参数 x1、x2。
+            # 所以，分类线可以表示成 x2 = -(w0 + w1*x1)/w2
+            x = np.linspace(-0.5, 1.2, 50)
+            y = -(self.thetas[0][0] + self.thetas[1][0] * x) / self.thetas[2][0]
+            plt.plot(x, y, 'k')
+            # 3_计算准确率
+            hAns = self.hypothesis(dataX)
+            plt.show()
+            return self.get_accuracy(hAns,dataY)
 
     def GD_getAns(self):
         """用Gradient descent完成任务
@@ -140,7 +187,7 @@ class Logistic_Regression:
             plt.title('accuracy')
             plt.xlabel('time')
             plt.ylabel('accuracy')
-            accuracy.append(self.get_accuracy(h_ans))
+            accuracy.append(self.get_accuracy(h_ans,self.dataY))
             plt.plot(step,accuracy)
             #3_绘制分类图，由数据点和分类线构成。
             #其中数据点用红蓝两色来区分不同的分类（该种类为trainning data 给定的）
@@ -172,7 +219,7 @@ class Logistic_Regression:
             y = -(self.thetas[0][0] + self.thetas[1][0]*x)/self.thetas[2][0]
             plt.plot(x,y,'k')
             plt.pause(0.001)
-            if self.get_accuracy(h_ans) > 0.8:
+            if accuracy[-1] > 0.8:
                 break
             i += 1
         plt.ioff()
@@ -215,7 +262,7 @@ class Logistic_Regression:
             plt.title('accuracy')
             plt.xlabel('time')
             plt.ylabel('accuracy')
-            accuracy.append(self.get_accuracy(h_ans))
+            accuracy.append(self.get_accuracy(h_ans,self.dataY))
             plt.plot(step, accuracy)
             # 3_绘制分类图，由数据点和分类线构成。
             # 其中数据点用红蓝两色来区分不同的分类（该种类为trainning data 给定的）
@@ -247,7 +294,7 @@ class Logistic_Regression:
             y = -(self.thetas[0][0] + self.thetas[1][0] * x) / self.thetas[2][0]
             plt.plot(x, y, 'k')
             plt.pause(0.001)
-            if self.get_accuracy(h_ans) > 0.8:
+            if accuracy[-1] > 0.8:
                 break
             i += 1
         plt.ioff()
