@@ -61,12 +61,10 @@ class Softmax_Regression:
             up = np.zeros((colNum,))  # 分子
             under = np.zeros((colNum,))  # 分母
             # 计算分母
-            for i in range(colNum):
-                for j in range(self.classNum):
-                    under[i] += math.exp(self.thetas[:, j] @ data[:, i])
+            for j in range(self.classNum):
+                under += math.exp(self.thetas[:, j] @ data)
             # 计算分子
-            for i in range(colNum):
-                up[i] = math.exp(self.thetas[:, int(theClass)] @ data[:, i])
+            up = math.exp(self.thetas[:, int(theClass)] @ data)
         #计算结果
         ans = up/under
         return ans

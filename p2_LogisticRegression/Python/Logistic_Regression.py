@@ -297,6 +297,7 @@ class Logistic_Regression:
             if accuracy[-1] > 0.8:
                 break
             i += 1
+            plt.suptitle('logistic SGD train')
         plt.ioff()
         plt.show()
 
