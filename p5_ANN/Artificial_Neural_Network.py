@@ -123,8 +123,7 @@ class Artificial_Neural_Network:
         :param accuracy: 图像中显示的准确率
         :return: tempAccuracy
         """
-        mk = ['+', '^', 'o'];
-        cs = ['b', 'r', 'k']  # 分别代表散点标记、散点颜色的取值可能
+        mk = ['+', '^', 'o'];  cs = ['b', 'r', 'k']  # 分别代表散点标记、散点颜色的取值可能
         # 1_绘制 loss 图
         plt.subplot(131)
         plt.title('loss')
@@ -199,8 +198,46 @@ class Artificial_Neural_Network:
         plt.ioff()
         plt.show()
 
-if __name__ == '__main__':
-    trainX = '../Data/Exam/train/x.txt'
-    trainY = '../Data/Exam/train/y.txt'
-    ann = Artificial_Neural_Network(trainX,trainY)
-    ann.BP_train()
+    def plot_testResult(self, testXFile, testYFile=''):
+        """绘制分类图，由数据点和分类线构成。
+        注意:
+            1_在画图之前先对数据预处理
+            2_数据点用红蓝两色来区分不同的分类
+        :param testXFile: 测试数据 input 的文件名
+        :param testYFile: 测试数据 output 的文件名
+        :return: 无
+        """
+        if testYFile != '':
+            # 预处理
+            dataNum, dataX, tempDataY = self.load_dataFile(testXFile, testYFile)
+            dataX = nm.min_max_normalization(dataX, self.xMin, self.xMax)
+            dataX = dataX.T
+            dataY = np.zeros((self.outputNum, dataNum))
+            for i in range(tempDataY.size):
+                dataY[int(tempDataY[i]), i] = 1
+            xL = 0; xR = 1              # 分别代表散点图 x 轴的左右范围
+            yL = 0; yH = 1              # 分别代表散点图 y 轴的下上范围
+            mk = ['+', '^', 'o'];  cs = ['b', 'r', 'k']  # 分别代表散点标记、散点颜色的取值可能
+            plt.title('ann test')
+            plt.xlabel("x1")
+            plt.ylabel("x2")
+            # 1_绘图
+            # 1.1_绘制背景
+            tempRange = 100  # 代表要将 x、y 轴分为多少段
+            meshX, meshY = np.meshgrid(np.linspace(xL, xR, tempRange),
+                                       np.linspace(yL, yH, tempRange))
+            # 注意 meshX、meshY 都是二维的
+            meshData = np.vstack((meshX.flatten(), meshY.flatten()))
+            meshPredic = self.calculateY(meshData)[1]
+            meshClass = self.get_preClass(meshPredic)[0]
+            plt.contourf(meshX, meshY, meshClass.reshape(meshX.shape))
+            # 1.2_绘制散点
+            pltTool = np.argmax(dataY, axis=0)
+            for j in range(dataNum):
+                plt.scatter(dataX[0, j], dataX[1, j],
+                            marker=mk[pltTool[j]], c=cs[pltTool[j]])
+            plt.show()
+            # 2_计算准确率
+            yPre = self.calculateY(dataX)[1]
+            accuracy = self.get_accuracy(yPre, dataY)
+            return accuracy
